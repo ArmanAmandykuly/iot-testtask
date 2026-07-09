@@ -33,3 +33,18 @@
 1. **Запуск сервера:**
    ```bash
    docker-compose up -d
+
+После запуска откройте браузер: `http://localhost:9090` (логин/пароль: `sysadmin@thingsboard.org` / `sysadmin`).
+
+2. **Настройка устройства**
+1. В интерфейсе ThingsBoard перейдите в **Devices** -> **Add new device**.
+2. Укажите имя (например, `Ventilation_System`).
+3. После создания нажмите на устройство, перейдите во вкладку **Credentials** и скопируйте **Access Token**.
+
+ 3. **Запуск эмуляторa**
+1. Откройте файл `emulator.py`.
+2. В строке `TOKEN = "ВАШ_ТОКЕН"` вставьте скопированный токен устройства.
+3. Установите зависимости и запустите скрипт:
+   ```bash
+   pip install paho-mqtt
+   python3 emulator.py```
